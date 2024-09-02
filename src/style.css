@@ -1,12 +1,14 @@
 html, body{
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 nav{
     width: 1170px;
     height: 125px;
-    margin: 14px 346px 0 346px;
+    margin: 14px auto;
     background-color: black;
     display: flex;
     flex-direction: row;
@@ -15,21 +17,60 @@ nav{
 nav img{
     width: 175px;
     height: 75px;
-    padding: 25px 62px 25px 15px;
-    
-    
+    padding: 25px 30px 25px 15px; 
 }
 
 nav ul{
     width: 900px;
     height: 25px;
     display: flex;
-    margin: 50px 0 55px 0; 
+    margin: 55px 0 55px 0; 
 }   
 
 nav ul li{
+    display: flex;
     margin: 0px 0 0px 40px;
     color: white;
     list-style: none;
+}
+nav ul li a{
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+.select a, nav ul li a:hover{
+    text-decoration: line-through;
+    color: #E1AB30;
+    transition: 0.2s;
+}
+nav span{
+    font-family: Montserrat, sans-serif;
+    font-size: 11px;
+    color: rgb(134,134,134);
+    margin-right: 3px;
+    margin-top: 5px;
+}
+#Trabalhos{
+    background-color: blue;
+}
+.SlideShow{
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.Slide{
+    display: none;
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade{
+    from {opacity: .4;}
+    to {opacity: 1;}
 }
 
