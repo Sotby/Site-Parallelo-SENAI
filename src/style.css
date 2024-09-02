@@ -1,0 +1,35 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 1170px;
+    height: 125px;
+    margin: 14px 346px 0 346px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+nav img{
+    width: 175px;
+    height: 75px;
+    padding: 25px 62px 25px 15px;
+    
+    
+}
+
+nav ul{
+    width: 900px;
+    height: 25px;
+    display: flex;
+    margin: 50px 0 55px 0; 
+}   
+
+nav ul li{
+    margin: 0px 0 0px 40px;
+    color: white;
+    list-style: none;
+}
+
