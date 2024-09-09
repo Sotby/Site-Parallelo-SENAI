@@ -1,3 +1,4 @@
+/* Remove as margens */
 html, body{
     width: 100%;
     height: 100%;
@@ -6,10 +7,11 @@ body{
     margin: 0;
     padding: 0;
 }
+
+/* Configuração do Banner*/
 header{
     padding-top:14px;
     background-image: url(../assets/slides/slidebg1.jpg);
-    background-color: aqua;
     height:900px;
     width: 100%;
     background-repeat: no-repeat;
@@ -17,7 +19,7 @@ header{
     background-size:cover ;
     position: relative;
 }
-
+/*Configuração da Navegação */
 nav{
     width: 1170px;
     height: 125px;
@@ -30,13 +32,13 @@ nav{
     z-index: 2;
     transition: all 0.2s ease
 }
-
+/*Logo na Nav*/
 nav img{
     width: 175px;
     height: 75px;
     padding: 25px 30px 25px 15px; 
 }
-
+/*Conteiner dos links da Nav */
 nav ul{
     width: 900px;
     height: 25px;
@@ -44,13 +46,13 @@ nav ul{
     margin: 51px 0 55px 0; 
     padding-left: 30px;
 }   
-
 nav ul li{
     display: flex;
     margin: 0px 0 0px 40px;
     color: white;
     list-style: none;
 }
+/*Links na Nav*/
 nav ul li a{
     font-size: 16px;
     text-decoration: none;
@@ -58,12 +60,13 @@ nav ul li a{
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
 }
-
+/*Condição de Hover dos Links*/
 .select a, nav ul li a:hover{
     text-decoration: line-through 2px;
     color: #E1AB30;
     transition:linear 0.2s;
 }
+/*Ordem Numerica dos links*/
 nav span{
     font-size: 11px;
     font-weight: 14px;
@@ -73,6 +76,7 @@ nav span{
     float: left;
     font-family: "Montserrat", sans-serif;
 }
+/*Barra Amarela*/
 .yellow-bg{   
     position: absolute;
     bottom: 0;
@@ -87,6 +91,7 @@ nav span{
     
 
 }
+/*Texto da Barra Amarela*/
 .yellow-bg span{  
     margin-left: 50px; 
     width: 100px;
@@ -98,6 +103,7 @@ nav span{
     
 
 }
+/*Titulo dda Barra Amarela*/
 .yellow-bg h1{  
     color: white;
     font-size: 64px;
@@ -106,6 +112,7 @@ nav span{
     margin: 0 0 40px 50px;
     font-family: "Montserrat", sans-serif;
 }
+/* Botões da Barra Amarela*/
 .y-bgButtons{
     font-display: flex;
     flex-direction: row;
@@ -119,6 +126,7 @@ nav span{
     border: 0;
     
 }
+/*Regua*/
 .regua{
     background-image: url(../assets/divider-dark.png);
     width: 100%;
@@ -200,46 +208,112 @@ nav span{
 
 }
 .project{
+    position: relative;
     float: left;
     display: flex;
     flex-direction: column;
-    width: 40%;
-    padding:0 15px 0 15px;
+    width: 600px;
+    height: 480px;
+    margin: 0 15px 60px 15px;
+    background-position: center;
 }
-.project img{
-    float: left;
+
+.project-1{
+    background-image: url(../assets/project-1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.project-2{
+    background-image: url(../assets/project-2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.project-3{
+    background-image: url(../assets/project-3.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.project-4{
+    background-image: url(../assets/project-4.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.project a{
+    height: 100%;
+    width: auto;
+}
+.project::before{
+    content: "";
+    position: absolute;
     width: 100%;
+    height: 100%;
+    transition:ease-in-out 0.5s;
+    background-image: url(../assets/plus.png);
+    background-position:262.5px 192.5px;
+    background-repeat: no-repeat;
+    visibility: hidden;
 }
+.project:hover::before{
+    visibility: visible;
+    background-position:262.5px 202.5px;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.project:hover{
+    transition:10s ease-in-out;   
+    background-position: center;
+    background-size: 150%;
+}
+
 .detail{
+    justify-content: center;
+    position: absolute;
+    float: left;
+    bottom: 0px;
+    right: 5%;
     width: 90%;
-    margin: 0 5% 0 5%;
-    height: 88px;
+    height: 100px;
     background-color: white;
+    text-align: center;
 }
 
+.detail span{
+    float: left;
+    margin: 0 5px 0 50px;
+    color: rgb(127, 127, 127);
+    font-family: Montserrat, sans-serif;
+    font-size: 90px;
+    font-style: italic;
+    text-align: center;
+}
+.detail h6{
+    margin: 30px 0 0 0;
+    font-size: 18px;
+    font-style: italic;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+}
+.detail p{
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+    font-style: italic;
+    text-align: left;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.project:hover .detail span, .project:hover .detail h6{
+    color: #E1AB30;
+    transition: ease-in 0.1s;
+}
+.AllProjectsButtom{
+    background-color: black;
+    border-radius: 40px;
+    width: 200px;
+    height: 20px;
+    color: white;
+}
 #Trabalhos{
     background-color: blue;
 }
@@ -249,19 +323,4 @@ nav span{
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-}
-@media (max-width:1170px){
-    nav ul{
-        display: none;
-        transition: 0.2s;
-    }
-    nav{
-        max-width: 80%;
-    }
-    .yellow-bg{
-        width: 600px;       
-        height: 320px;
-        background-size:contain;
-        background-position: bottom;
-    }
 }

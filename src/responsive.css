@@ -1,0 +1,15 @@
+@media (max-width:1170px){
+    nav ul{
+        display: none;
+        transition: 0.2s;
+    }
+    nav{
+        max-width: 80%;
+    }
+    .yellow-bg{
+        width: 600px;       
+        height: 320px;
+        background-size:contain;
+        background-position: bottom;
+    }
+}
