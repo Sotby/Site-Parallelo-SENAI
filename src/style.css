@@ -10,10 +10,12 @@ header{
     padding-top:14px;
     background-image: url(../assets/slides/slidebg1.jpg);
     background-color: aqua;
-    height:895px;
+    height:900px;
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center;    
     background-size:cover ;
+    position: relative;
 }
 
 nav{
@@ -23,6 +25,10 @@ nav{
     background-color: black;
     display: flex;
     flex-direction: row;
+    position:sticky;
+    top: 0;
+    z-index: 2;
+    transition: all 0.2s ease
 }
 
 nav img{
@@ -35,7 +41,8 @@ nav ul{
     width: 900px;
     height: 25px;
     display: flex;
-    margin: 55px 0 55px 0; 
+    margin: 51px 0 55px 0; 
+    padding-left: 30px;
 }   
 
 nav ul li{
@@ -45,11 +52,11 @@ nav ul li{
     list-style: none;
 }
 nav ul li a{
-    font-family: Montserrat, sans-serif;
     font-size: 16px;
     text-decoration: none;
     color: inherit;
     text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
 }
 
 .select a, nav ul li a:hover{
@@ -58,28 +65,203 @@ nav ul li a{
     transition:linear 0.2s;
 }
 nav span{
-    font-family: Montserrat, sans-serif;
     font-size: 11px;
     font-weight: 14px;
     color: rgb(134,134,134);
     margin-right: 3px;
     margin-top: 5px;
     float: left;
+    font-family: "Montserrat", sans-serif;
 }
-.yellow-bg{
-    padding-top: 330px;
+.yellow-bg{   
+    position: absolute;
+    bottom: 0;
+    width: 833px;
+    height: 438px; 
+    background-image: url(../assets/slides/yellow-bg.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
 }
-.yellow-bg img{
-    height: 440px;
-    width: 830px;
+.yellow-bg span{  
+    margin-left: 50px; 
+    width: 100px;
+    height: 25px;
+    font-size: 24px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    
+
+}
+.yellow-bg h1{  
+    color: white;
+    font-size: 64px;
+    font-weight: 700;
+    width: 100px;
+    margin: 0 0 40px 50px;
+    font-family: "Montserrat", sans-serif;
+}
+.y-bgButtons{
+    font-display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    position: absolute;
+    bottom: 25px;
+    left: 10px;
+}
+.y-bgButtons button{
+    background: none;
+    border: 0;
+    
 }
 .regua{
     background-image: url(../assets/divider-dark.png);
     width: 100%;
     height: 45px;
+    margin: 0;
+    padding: 0;
 }
+#OurProjects ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+#OurProjects ul li{
+    margin-left: 100px;
+    width:fit-content;
+    height: fit-content;
+}
+#OurProjects ul li:first-child{
+    margin: 0;
+}
+#OurProjects ul li:last-child{
+    margin-left: 50px;
+}
+#OurProjects .citationspeech{
+    margin-top: 40px;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    width: 930px;
+    font-family: "Roboto Slab", serif;
+}
+#OurProjects .citation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#OurProjects .OurProjectsTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.OurProjectsTitle h4{
+    color: #E1AB30;
+    font-family: Montserrat, sans-serif;
+    font-style: italic;
+    font-size:24px;
+    font-weight: 300;
+    letter-spacing: 11px;
+    margin: 110px 0 0 0;
+}
+.OurProjectsTitle h1{
+    font-family: Montserrat, sans-serif;
+    font-size: 85px;
+    font-style: italic;
+    font-weight: 700;
+    margin:0 0 12px 0;
+    background-image: url(../assets/black-wave.png);
+    background-position-x: 50%;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    
+}
+.TitleSpan{
+    font-size: 20px;
+    font-style: italic;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    margin-top: 0;
+}
+.ProjectsTable{
+    display: block;
+    width: 80%;
+    margin-left: 16.5%;
+    margin-top: 48px;
+    justify-content: center;
+    align-items: center;
+
+}
+.project{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding:0 15px 0 15px;
+}
+.project img{
+    float: left;
+    width: 100%;
+}
+.detail{
+    width: 90%;
+    margin: 0 5% 0 5%;
+    height: 88px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Trabalhos{
     background-color: blue;
 }
 
-
+.montserrat-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+@media (max-width:1170px){
+    nav ul{
+        display: none;
+        transition: 0.2s;
+    }
+    nav{
+        max-width: 80%;
+    }
+    .yellow-bg{
+        width: 600px;       
+        height: 320px;
+        background-size:contain;
+        background-position: bottom;
+    }
+}
